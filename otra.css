@@ -1,0 +1,52 @@
+.hero-pesca {
+    position: relative;
+    height: 90vh;
+    background-image: url('tu-imagen.jpg');
+    /* aquí agregas tu imagen luego */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.hero-overlay .subtitulo {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+.hero-overlay .titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+
+.btn-hero {
+    background-color: #a6ce39;
+    /* verde lima como el logo */
+    color: #0a0f1a;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #8cb82e;
+    color: #fff;
+}

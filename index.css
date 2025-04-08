@@ -1,0 +1,454 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #09152e;
+    margin: 0;
+    padding: 0;
+
+}
+}
+
+/* HEADER */
+/* HEADER */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #020b27ed;
+  color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  left: 1.5rem;
+  top: 1.2rem;
+  z-index: 1100;
+}
+
+/* Menú lateral oculto por defecto */
+nav#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #0b1a30;
+  padding: 2rem 1rem;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
+}
+
+nav#mobileMenu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+nav#mobileMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav#mobileMenu a:hover {
+  color: #a6ce39;
+}
+
+nav#mobileMenu.open {
+  left: 0;
+}
+
+/* Pantallas grandes: menú visible horizontal */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  nav#mobileMenu {
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  nav#mobileMenu ul {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  nav#mobileMenu a {
+    font-size: 1rem;
+  }
+}
+
+/* Pantallas pequeñas: mostrar botón */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav#mobileMenu ul {
+    padding-top: 3rem;
+  }
+
+  .logo {
+    margin-left: auto;
+  }
+}
+
+
+/* HERO */
+
+.hero-pesca {
+  position: relative;
+  height: 90vh;
+  background-image: url('/img/pesca4.jpg');
+  /* aquí agregas tu imagen luego */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.hero-overlay .subtitulo {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.hero-overlay .titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  background-color: #a6ce39;
+  /* verde lima como el logo */
+  color: #0a0f1a;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #8cb82e;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: #0b3c5d;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0a2f49;
+}
+
+.btn.small {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.lista-horizontal {
+  background-color: #0a310a;
+  display: flex;
+  justify-content: center;  /* Centra los elementos horizontalmente */
+  align-items: center;      /* Centra los elementos verticalmente */
+  list-style-type: none;     /* Elimina los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  width: 100%;              /* Asegura que ocupe todo el ancho disponible */
+  overflow-x: auto;         /* Permite el desplazamiento horizontal si es necesario */
+  white-space: nowrap;      /* Evita que los elementos se alineen en varias filas */
+}
+
+.lista-horizontal li {
+  margin-right: 40px;       /* Espaciado entre los elementos */
+  font-size: 2rem;          /* Ajuste de tamaño de fuente */
+  text-align: center;       /* Centra el texto dentro de cada elemento */
+  position: relative;       /* Necesario para la barra de separación */
+  padding: 10px;
+}
+
+.lista-horizontal .seccion:hover {
+  background-color: #012009; /* Color de fondo verde en hover */
+  color: white;              /* Texto blanco en hover */
+  cursor: pointer;          /* Cambia el cursor para indicar interactividad */
+}
+
+.lista-horizontal .seccion::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(9, 9, 9); /* Barra de separación */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lista-horizontal .seccion:hover::after {
+  opacity: 1;  /* Muestra la barra cuando se pasa el cursor */
+}
+
+@media (max-width: 768px) {
+  .lista-horizontal {
+    flex-wrap: wrap;         /* Permite que los elementos se ajusten si la pantalla es pequeña */
+    justify-content: flex-start; /* Los elementos se alinean al inicio */
+    padding: 10px 0;
+  }
+
+  .lista-horizontal li {
+    margin-right: 10px;      /* Espaciado más pequeño en pantallas pequeñas */
+    margin-bottom: 10px;     /* Agrega espacio entre los elementos en pantallas pequeñas */
+    width: calc(50% - 10px); /* Hace que cada elemento ocupe la mitad del ancho */
+  }
+}
+
+
+
+/* SECCIONES DESTACADAS */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background-color: #0a0f1a;
+}
+
+.highlight {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.highlight-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.highlight-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.btn.small {
+  padding: 0.5rem 1rem;
+  background-color: #a6ce39;
+  color: #0a0f1a;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 1px;
+  transition: background 0.3s ease;
+}
+
+.btn.small:hover {
+  background-color: #8cb82e;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .highlight {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .highlight-content h3 {
+    font-size: 1rem;
+  }
+
+  .btn.small {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* VIDEO DESTACADO */
+.featured-video {
+  padding: 2rem;
+  background-color: #e6f0f3;
+  text-align: center;
+}
+
+.featured-video h2 {
+  margin-bottom: 1rem;
+}
+
+.featured-video video {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(236, 227, 227, 0.925);
+}
+
+/* BLOG */
+.blog {
+  padding: 2rem;
+  text-align: center;
+}
+
+.blog article {
+  margin: 1.5rem 0;
+}
+
+.blog h2 {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: #040438f6;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.footer-links div {
+  margin: 1rem;
+}
+
+footer h4 {
+  margin-bottom: 0.5rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0.3rem 0;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ffd700;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .highlights {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .featured-video video {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
