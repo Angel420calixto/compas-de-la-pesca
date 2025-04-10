@@ -1,52 +1,387 @@
-.hero-pesca {
-    position: relative;
-    height: 90vh;
-    background-image: url('tu-imagen.jpg');
-    /* aquí agregas tu imagen luego */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #020e04;
+    color: #333;
+    line-height: 1.6;
+  }
+   /* Estilos del header */
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s ease;
+}
+
+/* Espaciado para el contenido debajo del header */
+body {
+  margin-top: 80px; /* Ajusta esto según la altura del header */
+}
+
+/* Estilos del menú desplegable */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Oculta el menú fuera de la vista */
+  width: 250px;
+  height: 100%;
+  background-color: #0b1a30;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#mobileMenu ul {
+  list-style: none;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#mobileMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+#mobileMenu a:hover {
+  color: #a6ce39;
+}
+
+/* Mostrar el menú desplegable */
+#mobileMenu.open {
+  left: 0;
+}
+
+/* Estilos para el botón de menú en móvil */
+.menu-toggle {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1101;
+  display: none; /* Ocultar por defecto en pantallas grandes */
+}
+
+/* Menú visible en pantallas grandes */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #mobileMenu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  #mobileMenu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  #mobileMenu a {
+    font-size: 1rem;
+  }
+}
+
+/* Menú visible en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Mostrar el botón de menú en pantallas pequeñas */
+  }
+}
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    color: #ff4040;
+  }
+  
+  /* Hero principal */
+  .hero {
+    background: url('img/pichonportada.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    background-color: #ff4040;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #cc0000;
+  }
+.fotos{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f1ebeb;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+  /* Estilos generales para la galería de fotos */
+  .features {
+    display: flex;
+    background-color: #0a0f1a;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  .feature {
+    flex: 0 0 100%;
+    width: 100vw;
+    height: 60vh;
     background-size: cover;
     background-position: center;
+    scroll-snap-align: start;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  .feature-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
+    align-items: center;
+    color: #fff;
     text-align: center;
-}
-
-.hero-overlay {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 800px;
-}
-
-.hero-overlay .subtitulo {
+    padding: 1rem;
+  }
+  
+  .feature-content h3 {
     font-size: 1.2rem;
-    font-style: italic;
     margin-bottom: 1rem;
-    color: #ddd;
-}
-
-.hero-overlay .titulo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    line-height: 1.3;
-    margin-bottom: 2rem;
-}
-
-.btn-hero {
+  }
+  
+  .btn.small {
+    padding: 0.5rem 1rem;
     background-color: #a6ce39;
-    /* verde lima como el logo */
     color: #0a0f1a;
-    padding: 0.8rem 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 1px;
     transition: background 0.3s ease;
-}
-
-.btn-hero:hover {
+  }
+  
+  .btn.small:hover {
     background-color: #8cb82e;
     color: #fff;
-}
+  }
+  
+  .show-more-btn {
+    display: none;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #a6ce39;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 1px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+  }
+  
+  .show-more-btn:hover {
+    background-color: #8cb82e;
+  }
+  
+  /* Móviles */
+  @media (max-width: 768px) {
+    .features {
+      padding: 0;     /* Sin padding para que la imagen no se recorte */
+      gap: 0;         /* Sin espacios entre imágenes */
+    }
+  
+    .feature {
+      border-radius: 0;
+    }
+  
+    .feature-content h3 {
+      font-size: 1rem;
+    }
+  
+    .btn.small {
+      font-size: 0.9rem;
+    }
+  
+    .show-more-btn {
+      display: block;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Escritorio */
+  @media (min-width: 769px) {
+    .features {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+  
+    .feature {
+      width: 100%;
+      max-width: 350px;
+      height: 180px;
+      border-radius: 2px;
+    }
+  
+    .show-more-btn {
+      display: none;
+    }
+  }
+  
+  /* Video destacado */
+  .featured-video {
+    background-color: #f0f0f0;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .featured-video h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .featured-video video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+  }
+  
+  /* Blog */
+  .blog {
+    padding: 4rem 2rem;
+    background-color: #fff;
+  }
+  
+  .blog h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .blog article {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    border-left: 4px solid #ff4040;
+    background: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .blog h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ff4040;
+    display: inline-block;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 0.3rem 0;
+  }
+  
+  .footer-links a:hover {
+    color: #ff4040;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
