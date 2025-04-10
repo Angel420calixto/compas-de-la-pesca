@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Red de Pesca</title>
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="/index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,21 +17,21 @@
 
   <!-- Header -->
   <header>
-    <div class="menu-toggle" id="menuToggle">☰</div>
-    <div class="logo">🎣 Compas de La Pesca</div>
-    <nav id="mobileMenu">
-      <ul>
-        <li><a href="#">Cañas</a></li>
-        <li><a href="#">Papa/Gabo</a></li>
-        <li><a href="#">Accesorios</a></li>
-        <li><a href="#">Comunidad</a></li>
-        <li><a href="#">Sobre Nosotros</a></li>
-        <li><a href="#">Mi Cuenta</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  
+  <div class="menu-toggle" id="menuToggle">☰</div>
+  <div class="logo">🎣 Compas de La Pesca</div>
+  <nav id="mobileMenu">
+    <ul>
+      <li><a href="#">Cañas</a></li>
+      <li><a href="#">Papa/Gabo</a></li>
+      <li><a href="#">Accesorios</a></li>
+      <li><a href="#">Comunidad</a></li>
+      <li><a href="#">Sobre Nosotros</a></li>
+      <li><a href="#">Mi Cuenta</a></li>
+    </ul>
+  </nav>
+</header>
+
+
   <section class="hero-pesca">
     <div class="hero-overlay">
       <h2 class="subtitulo">El tiempo pasa mejor Pescando...</h2>
@@ -40,27 +40,18 @@
     </div>
   </section>
 
-  <ul class="lista-horizontal">
-    <li class="seccion">Pesca de rio</li>
-    <li class="seccion">Videos salidas</li>
-    <li class="seccion">Cañas</li>
-    <li class="seccion">Galería de fotos</li>
-    <li class="seccion">Comentarios</li>
-  </ul>
-  
-  
   <!-- Secciones destacadas -->
   <section class="highlights">
     <div class="highlight" style="background-image: url('/img/portadapesca1.jpg');">
       <div class="highlight-content">
-        <h3>Nuestras salidas</h3>
+        <h3>Nuestras salidas con el pichon</h3>
         <a href="/otra.html" class="btn small">Ver mas</a>
       </div>
     </div>
   
     <div class="highlight" style="background-image: url('/img/pesca5.jpg');">
       <div class="highlight-content">
-        <h3>Lugares Para pescar</h3>
+        <h3>Nuestros Lugares Para pescar</h3>
         <a href="#" class="btn small">Explorar</a>
       </div>
     </div>
@@ -73,14 +64,104 @@
     </div>
   </section>
   
-
+<div>
+  <h2 class="titulo">ya sea en rio, o lago tu elijes que lugar es mejor</h2>
+</div>
   <!-- Video destacado -->
-  <section class="featured-video">
-    <h2>Video Destacado</h2>
-    <video controls poster="img/video-poster.jpg">
-      <source src="video/pesca.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
+  <section class="features">
+    <div class="feature" style="background-image: url('/img/verticales/vertical.jpg');">
+      <div class="feature-content">
+        <h3>Nuestras salidas</h3>
+        <a href="/otra.html" class="btn small">Ver más</a>
+      </div>
+    </div>
+  
+    <div class="feature" style="background-image: url('/img/verticales/vertical1.jpg');">
+      <div class="feature-content">
+        <h3>Lugares para pescar</h3>
+        <a href="#" class="btn small">Explorar</a>
+      </div>
+    </div>
+  
+    <div class="feature" style="background-image: url('/img/verticales/vertical2.jpg');">
+      <div class="feature-content">
+        <h3>Las Mejores Cañas</h3>
+        <a href="#" class="btn small">Leer más</a>
+      </div>
+    </div>
+
+    <div class="feature" style="background-image: url('/img/otrapesca.jpg');">
+      <div class="feature-content">
+        <h3>Las Mejores Cañas</h3>
+        <a href="#" class="btn small">Leer más</a>
+      </div>
+    </div>
+
+    <div class="feature" style="background-image: url('/img/rio8.jpg');">
+      <div class="feature-content">
+        <h3>Las Mejores Cañas</h3>
+        <a href="#" class="btn small">Leer más</a>
+      </div>
+    </div>
+
+    <div class="feature" style="background-image: url('/img/rio4.jpg');">
+      <div class="feature-content">
+        <h3>Las Mejores Cañas</h3>
+        <a href="#" class="btn small">Leer más</a>
+      </div>
+    </div>
+    
+    <button class="show-more-btn">Ver más</button>
+</section>
+
+
+
+  <div>
+    <h2 class="titulo">ya sea en rio, o lago tu elijes que lugar es mejor</h2>
+  </div>
+  <section class="video-gallery">
+    <h2 class="gallery-title">Videos de pesca</h2>
+  
+    <div class="video-main">
+      <div class="video-player">
+        <video controls poster="/img/verticales/vertical.jpg">
+          <source src="/img/videoo.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+        <div class="video-description">
+          <h3>Nuestras salidas</h3>
+          <p>Una de nuestras mejores aventuras de pesca. Paisajes increíbles y buena compañía.</p>
+        </div>
+  
+        <div class="video-comments">
+          <h4>Comentarios</h4>
+          <form class="comment-form">
+            <input type="text" placeholder="Tu nombre" required>
+            <textarea placeholder="Escribe un comentario..." required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+          <div class="comment-list"></div>
+        </div>
+      </div>
+  
+      <div class="video-thumbnails">
+        <video controls poster="/img/verticales/vertical1.jpg">
+          <source src="/img/videoo.mp4" type="video/mp4">
+        </video>
+        <video controls poster="/img/verticales/vertical2.jpg">
+          <source src="/videos/canas.mp4" type="video/mp4">
+        </video>
+        <video controls poster="/img/otrapesca.jpg">
+          <source src="/videos/pesca3.mp4" type="video/mp4">
+        </video>
+        <video controls poster="/img/rio8.jpg">
+          <source src="/videos/rio.mp4" type="video/mp4">
+        </video>
+        <video controls poster="/img/rio4.jpg">
+          <source src="/videos/rio2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
   </section>
 
   <!-- Noticias / Blog -->
