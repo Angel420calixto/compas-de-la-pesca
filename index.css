@@ -23,23 +23,32 @@ header {
   padding: 1rem 2rem;
   background-color: #020b27ed;
   color: white;
-  position: fixed; /* Fija el header en la parte superior */
-  top: 0; /* Asegura que quede en la parte superior */
-  left: 0; /* Asegura que quede alineado a la izquierda */
-  width: 100%; /* Asegura que el header ocupe todo el ancho */
-  z-index: 1000; /* Lo pone encima de otros elementos */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega sombra para un mejor efecto */
-  transition: top 0.3s ease; /* Suaviza el movimiento al ocultar o mostrar */
+  position: fixed;
+  /* Fija el header en la parte superior */
+  top: 0;
+  /* Asegura que quede en la parte superior */
+  left: 0;
+  /* Asegura que quede alineado a la izquierda */
+  width: 100%;
+  /* Asegura que el header ocupe todo el ancho */
+  z-index: 1000;
+  /* Lo pone encima de otros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Agrega sombra para un mejor efecto */
+  transition: top 0.3s ease;
+  /* Suaviza el movimiento al ocultar o mostrar */
 }
 
 /* Ajusta el espacio superior del body para que no quede oculto detrás del header */
 body {
-  margin-top: 60px; /* Ajusta este valor según la altura de tu header */
+  margin-top: 60px;
+  /* Ajusta este valor según la altura de tu header */
 }
 
 @media (max-width: 768px) {
   header {
-    padding: 1rem; /* Reduce el padding en pantallas pequeñas si es necesario */
+    padding: 1rem;
+    /* Reduce el padding en pantallas pequeñas si es necesario */
   }
 }
 
@@ -147,7 +156,7 @@ nav#mobileMenu.open {
 .hero-pesca {
   position: relative;
   height: 90vh;
-  background-image: url('/img/pesca4.jpg');
+  background-image: url('img/pesca4.jpg');
   /* aquí agregas tu imagen luego */
   background-size: cover;
   background-position: center;
@@ -158,14 +167,16 @@ nav#mobileMenu.open {
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
 }
-.titulo{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #0c0c0c;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 10px;
-  }
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0c0c0c;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
 .hero-overlay {
   background: rgba(0, 0, 0, 0.4);
   padding: 2rem;
@@ -207,7 +218,7 @@ nav#mobileMenu.open {
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  
+
 }
 
 .hero p {
@@ -390,6 +401,7 @@ nav#mobileMenu.open {
     font-size: 0.9rem;
   }
 }
+
 .titulo {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -398,6 +410,7 @@ nav#mobileMenu.open {
   padding: 1rem;
   border-radius: 10px;
 }
+
 /* Contenedor principal */
 .features {
   display: flex;
@@ -480,8 +493,10 @@ nav#mobileMenu.open {
 /* Móviles */
 @media (max-width: 768px) {
   .features {
-    padding: 0;     /* Sin padding para que la imagen no se recorte */
-    gap: 0;         /* Sin espacios entre imágenes */
+    padding: 0;
+    /* Sin padding para que la imagen no se recorte */
+    gap: 0;
+    /* Sin espacios entre imágenes */
   }
 
   .feature {
@@ -528,53 +543,55 @@ nav#mobileMenu.open {
 
 /*prueba de fcss*/
 .flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 
 .flex-item-1 {
-    align-self: auto;
-    background-color: #051733;
-    color: #f8f7f7;
-    order: 0;
+  align-self: auto;
+  background-color: #051733;
+  color: #f8f7f7;
+  order: 0;
 }
 
 
 .flex-item-2 {
-    align-self: auto;
-    background-color: #0f213e;
-    color: #FFFFFF;
-    order: 0;
+  align-self: auto;
+  background-color: #0f213e;
+  color: #FFFFFF;
+  order: 0;
 }
 
 
 .flex-item-3 {
-    align-self: auto;
-    background-color: #0d192b;
-    color: #FFFFFF;
-    order: 0;
+  align-self: auto;
+  background-color: #0d192b;
+  color: #FFFFFF;
+  order: 0;
 }
 
 
 .flex-item-4 {
-    align-self: auto;
-    background-color: #060606;
-    color: #0a0505;
-    order: 0;
+  align-self: auto;
+  background-color: #060606;
+  color: #0a0505;
+  order: 0;
 }
+
 /* seccion video*/
 .video-gallery {
   padding: 2rem;
   background-color: #080808;
   font-family: 'Segoe UI', sans-serif;
   max-width: 1600px;
-  margin: 0 auto; /* Este centrado es clave */
+  margin: 0 auto;
+  /* Este centrado es clave */
 }
 
 .gallery-title {
@@ -586,7 +603,8 @@ nav#mobileMenu.open {
 
 .video-main {
   display: flex;
-  justify-content: center; /* Centra el contenedor principal */
+  justify-content: center;
+  /* Centra el contenedor principal */
   flex-direction: row;
   gap: 1rem;
   flex-wrap: wrap;
